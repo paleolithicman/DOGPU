@@ -1,0 +1,509 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 222 09/21/2018 SJ Pro Edition
+# Date created = 17:11:58  January 03, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		FGPU_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name SEED 7
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.2
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:29:06  APRIL 03, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.4.0 Pro Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name FLOW_DISABLE_ASSEMBLER ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name FLOW_ENABLE_RTL_VIEWER ON
+
+
+# Classic Timing Assignments
+# ==========================
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+#set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "Stratix 10"
+set_global_assignment -name TOP_LEVEL_ENTITY fgpu
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name PROJECT_IP_REGENERATION_POLICY ALWAYS_REGENERATE_IP
+set_global_assignment -name REMOVE_REDUNDANT_LOGIC_CELLS ON
+set_global_assignment -name OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
+set_global_assignment -name STRICT_RAM_RECOGNITION OFF
+set_global_assignment -name OPTIMIZE_POWER_DURING_SYNTHESIS OFF
+set_global_assignment -name SYNTH_PROTECT_SDC_CONSTRAINT ON
+set_global_assignment -name SAVE_DISK_SPACE OFF
+set_global_assignment -name ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION ON
+set_global_assignment -name SYNTH_RESOURCE_AWARE_INFERENCE_FOR_BLOCK_RAM OFF
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE 1SM21BHN1F53E1VG
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+# Obsolete assignment in <Version 20.1> "set_global_assignment -name FLOW_ENABLE_EARLY_PLACE OFF"
+
+# Retimer Fast Forward Assignments
+# ================================
+#set_global_assignment -name FLOW_ENABLE_HYPER_RETIMER_FAST_FORWARD OFF
+
+# EDA Netlist Writer Assignments
+# ==============================
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+
+# Logic Lock Region Assignments
+# =============================
+#set_instance_assignment -name REGION_NAME gmem_controller_inst -to gmem_controller_inst
+
+# Power Estimation Assignments
+# ============================
+
+# start EDA_TOOL_SETTINGS(eda_simulation)
+# ---------------------------------------
+
+	# EDA Netlist Writer Assignments
+	# ==============================
+	set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+
+# end EDA_TOOL_SETTINGS(eda_simulation)
+# -------------------------------------
+
+# -----------------------
+# start ENTITY(cache_mem)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(cache_mem)
+# ---------------------
+
+# ---------------------------------------------
+# start ENTITY(cache_mem_ram_2port_181_vqzisbi)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(cache_mem_ram_2port_181_vqzisbi)
+# -------------------------------------------
+
+# ------------------------
+# start ENTITY(dot_ffma_0)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(dot_ffma_0)
+# ----------------------
+
+# ----------------------------------------------------------
+# start ENTITY(dot_ffma_0_altera_s10fpdsp_block_181_7extxaq)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(dot_ffma_0_altera_s10fpdsp_block_181_7extxaq)
+# --------------------------------------------------------
+
+# ------------------------
+# start ENTITY(dot_ffma_x)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(dot_ffma_x)
+# ----------------------
+
+# ----------------------------------------------------------
+# start ENTITY(dot_ffma_x_altera_s10fpdsp_block_181_ksivmvi)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(dot_ffma_x_altera_s10fpdsp_block_181_ksivmvi)
+# --------------------------------------------------------
+
+# ---------------------
+# start ENTITY(dot_red)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(dot_red)
+# -------------------
+
+# -------------------------------------------------------
+# start ENTITY(dot_red_altera_s10fpdsp_block_181_vgspema)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(dot_red_altera_s10fpdsp_block_181_vgspema)
+# -----------------------------------------------------
+
+# -----------------------
+# start ENTITY(fadd_fsub)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(fadd_fsub)
+# ---------------------
+
+# -------------------------------------------------------
+# start ENTITY(fadd_fsub_altera_fp_functions_181_jxi7sdi)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(fadd_fsub_altera_fp_functions_181_jxi7sdi)
+# -----------------------------------------------------
+
+# ------------------
+# start ENTITY(fdiv)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(fdiv)
+# ----------------
+
+# --------------------------------------------------
+# start ENTITY(fdiv_altera_fp_functions_181_dmvs2oi)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(fdiv_altera_fp_functions_181_dmvs2oi)
+# ------------------------------------------------
+
+# ------------------
+# start ENTITY(ffma)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(ffma)
+# ----------------
+
+# ----------------------------------------------------
+# start ENTITY(ffma_altera_s10fpdsp_block_181_otbn4pi)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(ffma_altera_s10fpdsp_block_181_otbn4pi)
+# --------------------------------------------------
+
+# ------------------
+# start ENTITY(fmul)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(fmul)
+# ----------------
+
+# --------------------------------------------------
+# start ENTITY(fmul_altera_fp_functions_181_ohbqq2q)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(fmul_altera_fp_functions_181_ohbqq2q)
+# ------------------------------------------------
+
+# --------------------
+# start ENTITY(frsqrt)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(frsqrt)
+# ------------------
+
+# ----------------------------------------------------
+# start ENTITY(frsqrt_altera_fp_functions_181_qsic4lq)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(frsqrt_altera_fp_functions_181_qsic4lq)
+# --------------------------------------------------
+
+# ------------------
+# start ENTITY(fslt)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(fslt)
+# ----------------
+
+# --------------------------------------------------
+# start ENTITY(fslt_altera_fp_functions_181_25fwrxy)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(fslt_altera_fp_functions_181_25fwrxy)
+# ------------------------------------------------
+
+# -------------------
+# start ENTITY(fsqrt)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(fsqrt)
+# -----------------
+
+# ---------------------------------------------------
+# start ENTITY(fsqrt_altera_fp_functions_181_7y3ikpa)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(fsqrt_altera_fp_functions_181_7y3ikpa)
+# -------------------------------------------------
+
+# ----------------------------
+# start ENTITY(mem_rsp_validQ)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(mem_rsp_validQ)
+# --------------------------
+
+# --------------------------------------------------
+# start ENTITY(mem_rsp_validQ_ram_4port_181_xwz36cy)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(mem_rsp_validQ_ram_4port_181_xwz36cy)
+# ------------------------------------------------
+
+# ------------------------
+# start ENTITY(rdData_buf)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(rdData_buf)
+# ----------------------
+
+# -----------------------------------------
+# start ENTITY(rdData_buf_fifo_181_yxgxbby)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(rdData_buf_fifo_181_yxgxbby)
+# ---------------------------------------
+
+# ------------------------------
+# start ENTITY(regfile_dp_block)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(regfile_dp_block)
+# ----------------------------
+
+# ----------------------------------------------------
+# start ENTITY(regfile_dp_block_ram_4port_181_3n27r5i)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(regfile_dp_block_ram_4port_181_3n27r5i)
+# --------------------------------------------------
+
+# ------------------
+# start ENTITY(smem)
+
+	# Pin & Location Assignments
+	# ==========================
+
+	# Analysis & Synthesis Assignments
+	# ================================
+	#set_instance_assignment -name ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS OFF -to smemory[0][0][0][31]__1 -entity smem
+	#set_instance_assignment -name ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS OFF -to * -entity smem
+
+	# Design Partition Assignments
+	# ============================
+
+# end ENTITY(smem)
+# ----------------
+
+# ------------------------
+# start ENTITY(smem_metaQ)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(smem_metaQ)
+# ----------------------
+
+# -----------------------------------------
+# start ENTITY(smem_metaQ_fifo_181_kvk4nxq)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(smem_metaQ_fifo_181_kvk4nxq)
+# ---------------------------------------
+
+# --------------------
+# start ENTITY(uitofp)
+
+	# Project-Wide Assignments
+	# ========================
+
+	# Signal Tap Assignments
+	# ======================
+
+# end ENTITY(uitofp)
+# ------------------
+
+# ----------------------------------------------------
+# start ENTITY(uitofp_altera_fp_functions_181_amrxnta)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(uitofp_altera_fp_functions_181_amrxnta)
+# --------------------------------------------------
+set_instance_assignment -name VIRTUAL_PIN ON -to * -entity dot_fir
+
+set_instance_assignment -name PARTITION_COLOUR 4294922932 -to fgpu -entity fgpu
+set_global_assignment -name VHDL_FILE ../RTL/mcr_wrap.vhd
+set_global_assignment -name VHDL_FILE ../RTL/fp_quartus/fadd_fsub.vhd
+set_global_assignment -name VHDL_FILE ../RTL/fp_quartus/fmul.vhd
+set_global_assignment -name VHDL_FILE ../RTL/fp_quartus/fdiv.vhd
+set_global_assignment -name VHDL_FILE ../RTL/fp_quartus/ffma.vhd
+set_global_assignment -name VHDL_FILE ../RTL/fp_quartus/fsqrt.vhd
+set_global_assignment -name VHDL_FILE ../RTL/fp_quartus/frsqrt.vhd
+set_global_assignment -name VHDL_FILE ../RTL/fp_quartus/fslt.vhd
+set_global_assignment -name VHDL_FILE ../RTL/fp_quartus/uitofp.vhd
+set_global_assignment -name VHDL_FILE ../RTL/macro/dot_fir_hard.vhd
+set_global_assignment -name VHDL_FILE ../RTL/fifo.vhd
+set_global_assignment -name VHDL_FILE ../RTL/WG_dispatcher.vhd
+set_global_assignment -name VHDL_FILE ../RTL/RTM.vhd
+set_global_assignment -name VHDL_FILE ../RTL/smem.vhd
+set_global_assignment -name VHDL_FILE ../RTL/regFile_vliw.vhd
+set_global_assignment -name VHDL_FILE ../RTL/regFile_dp.vhd
+set_global_assignment -name VHDL_FILE ../RTL/mult_add_sub.vhd
+set_global_assignment -name VHDL_FILE ../RTL/loc_indcs_generator.vhd
+set_global_assignment -name VHDL_FILE ../RTL/lmem.vhd
+set_global_assignment -name VHDL_FILE ../RTL/init_alu_en_ram.vhd
+set_global_assignment -name VHDL_FILE ../RTL/gmem_cntrl_hbm.vhd
+set_global_assignment -name VHDL_FILE ../RTL/DSP48E1.vhd
+set_global_assignment -name VHDL_FILE ../RTL/CV_vliw.vhd
+set_global_assignment -name VHDL_FILE ../RTL/CU_scheduler_vliw.vhd
+set_global_assignment -name VHDL_FILE ../RTL/CU_mem_cntrl.vhd
+set_global_assignment -name VHDL_FILE ../RTL/CU_instruction_dispatcher_vliw.vhd
+set_global_assignment -name VHDL_FILE ../RTL/CU_vliw.vhd
+set_global_assignment -name VHDL_FILE ../RTL/ALU_vliw.vhd
+set_global_assignment -name VHDL_FILE ../RTL/float_units.vhd
+set_global_assignment -name VHDL_FILE ../RTL/FGPU_vliw.vhd
+set_global_assignment -name VHDL_FILE ../RTL/FGPU_definitions.vhd
+set_global_assignment -name VERILOG_FILE ../RTL/reorder_validQ.v
+set_global_assignment -name VERILOG_FILE ../RTL/float_dot_chain8.v
+set_global_assignment -name VERILOG_FILE ../RTL/float_dot_acc_chain8.v
+set_global_assignment -name SDC_FILE ../project_quartus/fgpu.sdc
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/fadd_fsub.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/fdiv.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/fmul.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/frsqrt.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/fslt.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/fsqrt.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/uitofp.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/ffma.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/dot_red.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/cumem_metaQ.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/cumem_rqstQ.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/cu_gmem_fifo.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/regfile_dp_block.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/regfile_qp_block.ip
+set_global_assignment -name IP_FILE ../HW/sources/IPs/S10/gmem_metaQ.ip

@@ -1,0 +1,153 @@
+
+compiler_outputs/dl_fir5_fp32.bin:	file format ELF32-fgpu
+
+Disassembly of section .text:
+dl_fir5_fp32:
+       0:	44 00 00 a8 	lp	r4, 2
+       4:	02 00 00 a8 	lp	r2, 0
+       8:	27 00 00 a8 	lp	r7, 1
+       c:	05 00 00 a0 	lid	r5, 0
+      10:	06 00 00 a1 	wgoff	r6, 0
+      14:	03 00 00 a0 	lid	r3, 0
+      18:	61 0c 00 29 	srli	r1, r3, 3
+      1c:	28 0c 00 31 	andi	r8, r1, 3
+      20:	01 1c 00 77 	lwc	rf1, [r7 + r0 + 0]
+      24:	20 a0 00 ed 	vrvi	rf0, rf1, r8, 1
+      28:	09 11 00 33 	ori	r9, r8, 4
+      2c:	21 a4 00 ed 	vrvi	rf1, rf1, r9, 1
+      30:	02 9c 00 77 	lwc	rf2, [r7 + r0 + 1]
+      34:	41 a0 00 ed 	vrvi	rf1, rf2, r8, 1
+      38:	42 a4 00 ed 	vrvi	rf2, rf2, r9, 1
+      3c:	03 1c 01 77 	lwc	rf3, [r7 + r0 + 2]
+      40:	62 a0 00 ed 	vrvi	rf2, rf3, r8, 1
+      44:	63 a4 00 ed 	vrvi	rf3, rf3, r9, 1
+      48:	04 9c 01 77 	lwc	rf4, [r7 + r0 + 3]
+      4c:	83 a0 00 ed 	vrvi	rf3, rf4, r8, 1
+      50:	84 a4 00 ed 	vrvi	rf4, rf4, r9, 1
+      54:	05 1c 02 77 	lwc	rf5, [r7 + r0 + 4]
+      58:	a4 a0 00 ed 	vrvi	rf4, rf5, r8, 1
+      5c:	a5 a4 00 ed 	vrvi	rf5, rf5, r9, 1
+      60:	06 9c 02 77 	lwc	rf6, [r7 + r0 + 5]
+      64:	c5 a0 00 ed 	vrvi	rf5, rf6, r8, 1
+      68:	c6 a4 00 ed 	vrvi	rf6, rf6, r9, 1
+      6c:	07 1c 03 77 	lwc	rf7, [r7 + r0 + 6]
+      70:	e6 a0 00 ed 	vrvi	rf6, rf7, r8, 1
+      74:	e7 a4 00 ed 	vrvi	rf7, rf7, r9, 1
+      78:	08 9c 03 77 	lwc	rf8, [r7 + r0 + 7]
+      7c:	07 a1 00 ed 	vrvi	rf7, rf8, r8, 1
+      80:	08 a5 00 ed 	vrvi	rf8, rf8, r9, 1
+      84:	09 1c 04 77 	lwc	rf9, [r7 + r0 + 8]
+      88:	28 a1 00 ed 	vrvi	rf8, rf9, r8, 1
+      8c:	29 a5 00 ed 	vrvi	rf9, rf9, r9, 1
+      90:	0a 9c 04 77 	lwc	rf10, [r7 + r0 + 9]
+      94:	49 a1 00 ed 	vrvi	rf9, rf10, r8, 1
+      98:	4a a5 00 ed 	vrvi	rf10, rf10, r9, 1
+      9c:	0b 1c 05 77 	lwc	rf11, [r7 + r0 + 10]
+      a0:	6a a1 00 ed 	vrvi	rf10, rf11, r8, 1
+      a4:	6b a5 00 ed 	vrvi	rf11, rf11, r9, 1
+      a8:	0c 9c 05 77 	lwc	rf12, [r7 + r0 + 11]
+      ac:	8b a1 00 ed 	vrvi	rf11, rf12, r8, 1
+      b0:	8c a5 00 ed 	vrvi	rf12, rf12, r9, 1
+      b4:	0d 1c 06 77 	lwc	rf13, [r7 + r0 + 12]
+      b8:	ac a1 00 ed 	vrvi	rf12, rf13, r8, 1
+      bc:	ad a5 00 ed 	vrvi	rf13, rf13, r9, 1
+      c0:	0e 9c 06 77 	lwc	rf14, [r7 + r0 + 13]
+      c4:	cd a1 00 ed 	vrvi	rf13, rf14, r8, 1
+      c8:	ce a5 00 ed 	vrvi	rf14, rf14, r9, 1
+      cc:	0f 1c 07 77 	lwc	rf15, [r7 + r0 + 14]
+      d0:	ee a1 00 ed 	vrvi	rf14, rf15, r8, 1
+      d4:	e0 a5 00 ed 	vrvi	rf0, rf15, r9, 1
+      d8:	c1 14 00 10 	add	r1, r6, r5
+      dc:	21 14 00 21 	slli	r1, r1, 5
+      e0:	65 00 00 19 	li	r5, 49152
+      e4:	65 fc ff 1d 	lui	r5, 65535
+      e8:	25 14 00 30 	and	r5, r1, r5
+      ec:	42 14 00 10 	add	r2, r2, r5
+      f0:	00 00 00 94 	gsync
+      f4:	66 0c 00 2d 	srai	r6, r3, 3
+      f8:	cf 08 00 77 	lwc	rf15, [r2 + r6 + 0]
+      fc:	02 00 00 11 	addi	r2, r0, 0
+     100:	cf 08 00 df 	sswc	rf15, [r2 + r6 + 0]
+     104:	85 14 00 10 	add	r5, r4, r5
+     108:	61 80 ff 19 	li	r1, 65504
+     10c:	01 fc ff 1d 	lui	r1, 16383
+     110:	61 04 00 30 	and	r1, r3, r1
+     114:	24 08 00 21 	slli	r4, r1, 2
+     118:	00 00 00 93 	lsync
+     11c:	02 10 00 d2 	vdotm0	r2, rf0, [r4 + 0]
+     120:	22 90 00 d1 	vdot	r2, rf1, [r4 + 1]
+     124:	42 10 01 d1 	vdot	r2, rf2, [r4 + 2]
+     128:	62 90 01 d1 	vdot	r2, rf3, [r4 + 3]
+     12c:	82 10 02 d1 	vdot	r2, rf4, [r4 + 4]
+     130:	a2 90 02 d1 	vdot	r2, rf5, [r4 + 5]
+     134:	c2 10 03 d1 	vdot	r2, rf6, [r4 + 6]
+     138:	e2 90 03 d1 	vdot	r2, rf7, [r4 + 7]
+     13c:	02 11 04 d1 	vdot	r2, rf8, [r4 + 8]
+     140:	22 91 04 d1 	vdot	r2, rf9, [r4 + 9]
+     144:	42 11 05 d1 	vdot	r2, rf10, [r4 + 10]
+     148:	62 91 05 d1 	vdot	r2, rf11, [r4 + 11]
+     14c:	82 11 06 d1 	vdot	r2, rf12, [r4 + 12]
+     150:	a2 91 06 d1 	vdot	r2, rf13, [r4 + 13]
+     154:	c2 11 07 d1 	vdot	r2, rf14, [r4 + 14]
+     158:	02 90 07 d8 	vdotm1	r2, rf0, [r4 + 15]
+     15c:	62 14 00 7c 	sw	r2, [r5 + r3]
+     160:	86 00 20 11 	addi	r6, r4, 2048
+     164:	02 18 00 d2 	vdotm0	r2, rf0, [r6 + 0]
+     168:	22 98 00 d1 	vdot	r2, rf1, [r6 + 1]
+     16c:	42 18 01 d1 	vdot	r2, rf2, [r6 + 2]
+     170:	62 98 01 d1 	vdot	r2, rf3, [r6 + 3]
+     174:	82 18 02 d1 	vdot	r2, rf4, [r6 + 4]
+     178:	a2 98 02 d1 	vdot	r2, rf5, [r6 + 5]
+     17c:	c2 18 03 d1 	vdot	r2, rf6, [r6 + 6]
+     180:	e2 98 03 d1 	vdot	r2, rf7, [r6 + 7]
+     184:	02 19 04 d1 	vdot	r2, rf8, [r6 + 8]
+     188:	22 99 04 d1 	vdot	r2, rf9, [r6 + 9]
+     18c:	42 19 05 d1 	vdot	r2, rf10, [r6 + 10]
+     190:	62 99 05 d1 	vdot	r2, rf11, [r6 + 11]
+     194:	82 19 06 d1 	vdot	r2, rf12, [r6 + 12]
+     198:	a2 99 06 d1 	vdot	r2, rf13, [r6 + 13]
+     19c:	c2 19 07 d1 	vdot	r2, rf14, [r6 + 14]
+     1a0:	02 98 07 d8 	vdotm1	r2, rf0, [r6 + 15]
+     1a4:	61 08 00 21 	slli	r1, r3, 2
+     1a8:	a3 04 00 10 	add	r3, r5, r1
+     1ac:	61 00 20 11 	addi	r1, r3, 2048
+     1b0:	02 04 00 7c 	sw	r2, [r1 + r0]
+     1b4:	85 00 40 11 	addi	r5, r4, 4096
+     1b8:	02 14 00 d2 	vdotm0	r2, rf0, [r5 + 0]
+     1bc:	22 94 00 d1 	vdot	r2, rf1, [r5 + 1]
+     1c0:	42 14 01 d1 	vdot	r2, rf2, [r5 + 2]
+     1c4:	62 94 01 d1 	vdot	r2, rf3, [r5 + 3]
+     1c8:	82 14 02 d1 	vdot	r2, rf4, [r5 + 4]
+     1cc:	a2 94 02 d1 	vdot	r2, rf5, [r5 + 5]
+     1d0:	c2 14 03 d1 	vdot	r2, rf6, [r5 + 6]
+     1d4:	e2 94 03 d1 	vdot	r2, rf7, [r5 + 7]
+     1d8:	02 15 04 d1 	vdot	r2, rf8, [r5 + 8]
+     1dc:	22 95 04 d1 	vdot	r2, rf9, [r5 + 9]
+     1e0:	42 15 05 d1 	vdot	r2, rf10, [r5 + 10]
+     1e4:	62 95 05 d1 	vdot	r2, rf11, [r5 + 11]
+     1e8:	82 15 06 d1 	vdot	r2, rf12, [r5 + 12]
+     1ec:	a2 95 06 d1 	vdot	r2, rf13, [r5 + 13]
+     1f0:	c2 15 07 d1 	vdot	r2, rf14, [r5 + 14]
+     1f4:	02 94 07 d8 	vdotm1	r2, rf0, [r5 + 15]
+     1f8:	61 00 40 11 	addi	r1, r3, 4096
+     1fc:	02 04 00 7c 	sw	r2, [r1 + r0]
+     200:	84 00 60 11 	addi	r4, r4, 6144
+     204:	02 10 00 d2 	vdotm0	r2, rf0, [r4 + 0]
+     208:	22 90 00 d1 	vdot	r2, rf1, [r4 + 1]
+     20c:	42 10 01 d1 	vdot	r2, rf2, [r4 + 2]
+     210:	62 90 01 d1 	vdot	r2, rf3, [r4 + 3]
+     214:	82 10 02 d1 	vdot	r2, rf4, [r4 + 4]
+     218:	a2 90 02 d1 	vdot	r2, rf5, [r4 + 5]
+     21c:	c2 10 03 d1 	vdot	r2, rf6, [r4 + 6]
+     220:	e2 90 03 d1 	vdot	r2, rf7, [r4 + 7]
+     224:	02 11 04 d1 	vdot	r2, rf8, [r4 + 8]
+     228:	22 91 04 d1 	vdot	r2, rf9, [r4 + 9]
+     22c:	42 11 05 d1 	vdot	r2, rf10, [r4 + 10]
+     230:	62 91 05 d1 	vdot	r2, rf11, [r4 + 11]
+     234:	82 11 06 d1 	vdot	r2, rf12, [r4 + 12]
+     238:	a2 91 06 d1 	vdot	r2, rf13, [r4 + 13]
+     23c:	c2 11 07 d1 	vdot	r2, rf14, [r4 + 14]
+     240:	02 90 07 d8 	vdotm1	r2, rf0, [r4 + 15]
+     244:	61 00 60 11 	addi	r1, r3, 6144
+     248:	02 04 00 7c 	sw	r2, [r1 + r0]
+     24c:	00 00 00 92 	ret
